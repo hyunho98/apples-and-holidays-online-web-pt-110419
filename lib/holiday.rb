@@ -71,7 +71,7 @@ def all_supplies_in_holidays(holiday_hash)
       if "#{day}".include?("_")
         puts "  " + day.to_s.split("_").collect{|i| i.capitalize}.join(" ") + ": " + supplies.join(", ")
       else
-        puts "  " + day.to_s.capitalize + supplies.join(", ")
+        puts "  " + "#{day}: ".capitalize + supplies.join(", ")
       end}
     }
 end
