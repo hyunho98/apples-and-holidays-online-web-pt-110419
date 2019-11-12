@@ -54,7 +54,7 @@ def all_winter_holiday_supplies(holiday_hash)
   if holiday == :winter
     holiday.collect{|day, supplies|
     supplies}
-  end}.flatten
+  end}
 end
 
 def all_supplies_in_holidays(holiday_hash)
