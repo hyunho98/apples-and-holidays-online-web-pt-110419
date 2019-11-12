@@ -71,6 +71,7 @@ def all_supplies_in_holidays(holiday_hash)
     holidays.each{|day, supplies|
       puts "  " + "#{day}: ".capitalize + supplies.join(", ")}
     }
+    puts output
 end
 
 def all_holidays_with_bbq(holiday_hash)
