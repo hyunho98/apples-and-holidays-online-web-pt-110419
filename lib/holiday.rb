@@ -53,7 +53,7 @@ def all_winter_holiday_supplies(holiday_hash)
   holiday_hash.each{|season, holiday|
   if season == :winter
     return holiday.collect{|day, supplies|
-    supplies}
+    supplies}.flatten
   end}
 end
 
