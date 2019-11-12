@@ -70,6 +70,7 @@ def all_supplies_in_holidays(holiday_hash)
     holidays.each{|day, supplies|
       supplies.each{|supply|
         puts "#{day}: #{supply}"}
+      }
     }
 end
 
