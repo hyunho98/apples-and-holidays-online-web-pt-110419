@@ -69,9 +69,9 @@ def all_supplies_in_holidays(holiday_hash)
     puts "#{season}:".capitalize
     holidays.each{|day, supplies|
       if "#{day}".include?("_")
-        puts "  " + "#{day}".split("_").collect{|i| i.capitalize}.join(" ") + ": " + supplies.join(", ")
+        puts "  " + day.to_s.split("_").collect{|i| i.capitalize}.join(" ") + ": " + supplies.join(", ")
       else
-        puts "  " + "#{day}: ".capitalize + supplies.join(", ")
+        puts "  " + day.to_s.capitalize + supplies.join(", ")
       end}
     }
 end
@@ -82,6 +82,6 @@ def all_holidays_with_bbq(holiday_hash)
   holiday_hash.collect{|season, holidays|
     holidays.collect{|day, supplies|
       if supplies.include?("BBQ")
-        supplies
+        day
       end}}
 end
